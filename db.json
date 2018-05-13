@@ -1,0 +1,171 @@
+{
+  "tabs": [
+    {"title": "DNS", "id": "parent-dns"},
+    {"title": "Email", "id": "parent-email"},
+    {"title": "Enumeration", "id": "parent-enum"},
+    {"title": "IP", "id": "parent-ip"},
+    {"title": "Profiling", "id": "parent-profile", "contexts": ["selection"]},
+    {"title": "Whois", "id": "parent-whois"},
+    {"title": "Google Dorks", "id": "parent-google"},
+    {"title": "Files", "id": "sub-files", "parentId": "parent-google"},
+    {"title": "Info Lookup", "id": "sub-lookup", "parentId": "parent-google"},
+    {"title": "Deep Content", "id": "sub-deep", "parentId": "parent-google"},
+    {"title": "Show All", "id": "show-all"}
+  ],
+  "items": {
+    "intodns": {
+      "link": "https://intodns.com/{url}", 
+      "definition": {"title": "IntoDNS", "parentId": "parent-dns", "id": "intodns"}
+    },
+    "robtex": {
+      "link": "https://www.robtex.com/dns/{url}.html",
+      "definition": {"title": "Robtex", "parentId": "parent-dns", "id": "robtex"}
+    },
+    "dnsstuff-report": {
+      "link": "https://www.dnsstuff.com/tools#dnsReport|type=domain&&value={url}", 
+      "definition": {"title": "DNS Stuff Report", "parentId": "parent-dns", "id": "dnsstuff-report"}
+    },
+
+
+    "hashemian": {
+      "link": "https://www.hashemian.com/tools/domain-email.php?b={url}", 
+      "definition": {"title": "Hashemian", "parentId": "parent-email", "id": "hashemian"}
+    },
+
+
+    "netcraft": {
+      "link": "https://toolbar.netcraft.com/site_report?url={url}", 
+      "definition": {"title": "Netcraft", "parentId": "parent-enum", "id": "netcraft"}
+    },
+    "shodan": {
+      "link": "https://www.shodan.io/search?query={url}",
+      "definition": {"title": "Shodan", "parentId": "parent-enum", "id": "shodan"}
+    },
+    "archive": {
+      "link": "http://web.archive.org/web/*/{url}",
+      "definition": {"title": "Web Archive", "parentId": "parent-enum", "id": "archive"}
+    },
+    "builtwith": {
+      "link": "https://builtwith.com/{url}",
+      "definition": {"title": "Built With", "parentId": "parent-enum", "id": "builtwith"}
+    },
+
+    "centralops": {
+      "link": "https://centralops.net/co/DomainDossier.aspx?dom_whois=true&dom_dns=true&traceroute=true&net_whois=true&svc_scan=true&x=15&y=11&addr={url}",
+      "definition": {"title": "CentralOps", "parentId": "parent-ip", "id": "centralops"}
+    },
+    "dnsstuff-traceroute": {
+      "link": "https://www.dnsstuff.com/tools#traceroute|type=domain&&value={url}",
+      "definition": {"title": "Trace Route", "parentId": "parent-ip", "id": "dnsstuff-traceroute"}
+    },
+    "ipaddress": {
+      "link": "http://{url}.ipaddress.com",
+      "definition": {"title": "IP Address", "parentId": "parent-ip", "id": "ipaddress"}
+    },
+    "sameip": {
+      "link": "http://www.sameip.org/{url}",
+      "definition": {"title": "Same IP", "parentId": "parent-ip", "id": "sameip"}
+    },
+    "ip2location": {
+      "link": "https://www.ip2location.com/{url}",
+      "definition": {"title": "IP 2 Location", "parentId": "parent-ip", "id": "ip2location"}
+    },
+
+    "domaintools": {
+      "link": "https://whois.domaintools.com/{url}",
+      "definition": {"title": "Domain Tools", "parentId": "parent-whois", "id": "domaintools"}
+    },
+    "dnsstuff-whois": {
+      "link": "https://www.dnsstuff.com/tools#whois|type=domain&&value={url}",
+      "definition": {"title": "DNS Stuff Whois", "parentId": "parent-whois", "id": "dnsstuff-whois"}
+    },
+
+    "google-email": {
+      "link": "https://www.google.com/search?&q=\"@{url}\"+-{url}",
+      "definition": {"title": "Email Search", "id": "google-email", "parentId": "sub-deep"}
+    },
+    "google-groups": {
+      "link": "https://groups.google.com/forum/#!search/{url}",
+      "definition": {"title": "Groups Search", "id": "google-groups", "parentId": "sub-lookup"}
+    },
+    "google-news": {
+      "link": "https://news.google.com/news/search/section/q/{url}",
+      "definition": {"title": "News Search", "id": "google-news", "parentId": "sub-lookup"}
+    },
+    "google-finance": {
+      "link": "http://www.google.com/finance/?q={url}",
+      "definition": {"title": "Finance Search", "id": "google-finance", "parentId": "sub-lookup"}
+    },
+    "google-links": {
+      "link": "https://www.google.com/search?q=link:{url}",
+      "definition": {"title": "Links Search", "id": "google-links", "parentId": "sub-deep"}
+    },
+    "google-pdf": {
+      "link": "https://www.google.com/search?&q=filetype:pdf+site:{url}",
+      "definition": {"title": "PDF Files", "id": "google-pdf", "parentId": "sub-files"}
+    },
+    "google-xls": {
+      "link": "https://www.google.com/search?&q=filetype:xls+OR+filetype:xlsx+site:{url}",
+      "definition": {"title": "Excel Files", "id": "google-xls", "parentId": "sub-files"}
+    },
+    "google-ppt": {
+      "link": "https://www.google.com/search?&q=filetype:ppt+OR+filetype:pptx+site:{url}",
+      "definition": {"title": "PowerPoint Files", "id": "google-ppt", "parentId": "sub-files"}
+    },
+    "google-ppt": {
+      "link": "https://www.google.com/search?&q=filetype:doc+OR+filetype:docx+site:{url}",
+      "definition": {"title": "Word Files", "id": "google-doc", "parentId": "sub-files"}
+    },
+    "google-txt": {
+      "link": "https://www.google.com/search?&q=filetype:txt+site:{url}",
+      "definition": {"title": "TXT Files", "id": "google-txt", "parentId": "sub-files"}
+    },
+    "google-rtf": {
+      "link": "https://www.google.com/search?&q=filetype:rtf+site:{url}",
+      "definition": {"title": "RTF Files", "id": "google-rtf", "parentId": "sub-files"}
+    },
+    "google-sql": {
+      "link": "https://www.google.com/search?&q=filetype:sql+site:{url}",
+      "definition": {"title": "SQL Files", "id": "google-sql", "parentId": "sub-files"}
+    },
+
+    "google-inurl": {
+      "link": "https://www.google.com/search?&q=inurl:index.php%3Fid%3D+site:{url}",
+      "definition": {"title": "InUrl: Id", "id": "google-inurl", "parentId": "sub-deep"}
+    },
+    "google-intext": {
+      "link": "https://www.google.com/search?&q=intext:\"Password\"+site:{url}",
+      "definition": {"title": "InText: Password", "id": "google-intext", "parentId": "sub-deep"}
+    },
+    "google-intitle": {
+      "link": "https://www.google.com/search?&q=intitle:\"Index of /\"+site:{url}",
+      "definition": {"title": "InTitle: Index of", "id": "google-intitle", "parentId": "sub-deep"}
+    },
+
+    "anywho": {
+      "link": "https://www.anywho.com/people/{url}",
+      "definition": {"title": "Anywho", "parentId": "parent-profile", "id": "anywho", "contexts": ["selection"]}
+    },
+    "pipl": {
+      "link": "https://pipl.com/search/?q={url}",
+      "definition": {"title": "Pipl.com", "parentId": "parent-profile", "id": "pipl", "contexts": ["selection"]}
+    },
+    "spokeo": {
+      "link": "https://www.spokeo.com/{url}",
+      "definition":{"title": "Spokeo", "parentId": "parent-profile", "id": "spokeo", "contexts": ["selection"]}
+    },
+    "peekyou": {
+      "link": "https://www.peekyou.com/{url}",
+      "definition": {"title": "PeekYou", "parentId": "parent-profile", "id": "peekyou", "contexts": ["selection"]}
+    },
+    "syncme": {
+      "link": "https://sync.me/search/?number={url}",
+      "definition": {"title": "Sync.Me", "parentId": "parent-profile", "id": "syncme", "contexts": ["selection"]}
+    },
+
+    "tineye": {
+      "link": "https://tineye.com/search?extension_ver=bookmark_1.0&url={url}",
+      "definition": {"title": "Image Lookup", "id": "tineye", "contexts": ["image"]}
+    }
+  }
+}

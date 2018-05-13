@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "BigFoot",
+	"description": "This extension will analyze a page, make passive recon and footprinting",
+	"version": "1",
+
+	"background": {
+		"scripts": ["menu.js"]
+	},
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+
+    "icons": {
+      "16": "footprint-16.png",
+      "32": "footprint-32.png",
+      "128": "footprint-128.png"
+    },
+	"permissions": [
+		"activeTab", "tabs", "menus"
+	]
+}
